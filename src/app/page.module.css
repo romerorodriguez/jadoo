@@ -1,0 +1,233 @@
+/*primera seccion*/
+.heroSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 100px;
+  background-image: url('/img/hero/hero-bg.svg');
+}
+
+.textContainer {
+  max-width: 50%;
+}
+
+.subtitle {
+  color: #ff8c00 !important;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 5.5rem;
+  font-weight: 700;
+  color: #14183E !important;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #000;
+  font-weight: 545;
+  margin-top: 10px;
+}
+
+.seeButton {
+  padding: 15px 30px;
+  border-radius: 50px;
+  border: none;
+  background-color: #ff8c00;
+  color: white;
+  font-size: medium;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 25px;
+}
+
+.seeButton:hover {
+  background-color: #dc143c;
+  transform: scale(1.1);
+}
+
+.imageContainer {
+  position: relative;
+}
+
+.heroImage {
+  max-width: 800px;
+  height: auto;
+}
+
+.airplaneIcon {
+  position: absolute;
+  top: -30px;
+  right: -50px;
+  width: 80px;
+}
+
+/*categorias*/
+.categoryTitle {
+  color: #5E6282 !important;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  margin-top: 90px;
+}
+
+.category h3 {
+  color: #14183E !important;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 700;
+  font-size: 2.88651rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.card h4 {
+  color: #14183E;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/*vendidos*/
+.soldTitle {
+  color: #5E6282 !important;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  margin-top: 200px;
+}
+
+.sold h3 {
+  color: #14183E !important;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 700;
+  font-size: 2.88651rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.cardsContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: center;
+  margin: 10px;
+}
+
+.cardImage {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.card h4 {
+  color: #14183E;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #5E6282;
+  font-size: 1rem;
+  margin: 5px 0;
+  text-align: start;
+}
+
+/*comentarios*/
+.commentsTitle {
+  color: #5E6282 !important;
+  text-align: flex-start;
+  font-size: 1.2rem;
+  margin-left: 90px;
+  margin-top: 200px;
+}
+
+.comments h3 {
+  color: #14183E !important;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 700;
+  font-size: 2.88651rem;
+  margin-bottom: 10px;
+  text-align: flex-start;
+  margin-left: 90px;
+}
+
+/*reservacion*/
+.bookingTitle {
+  color: #5E6282 !important;
+  text-align: flex-start;
+  font-size: 1.2rem;
+  margin-left: 90px;
+  margin-top: 200px;
+}
+
+.booking h3 {
+  color: #14183E !important;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 700;
+  font-size: 2.88651rem;
+  margin-bottom: 10px;
+  text-align: flex-start;
+  margin-left: 90px;
+}
+
+/*seccion de subscripciones*/
+.box {
+  background-color: #F5F5DC;
+  border-radius: 129px 20px 20px 20px;
+  padding: 20px;
+  margin: 90px;
+}
+
+.box h2 {
+  color: #5E6282 !important;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  margin-top: 50px;
+}
+
+.input {
+  color: #5E6282;
+  padding: 12.5px 30px;
+  border: none;
+  border-radius: 5px;
+  justify-self: center;
+  background-color: #ffffff;
+  margin-top: 50px;
+}
+
+.sendButton {
+  padding: 12.5px 30px;
+  border: 0;
+  border-radius: 100px;
+  background-color: #ff8c00; 
+  color: #ffffff;
+  font-weight: Bold;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.sendButton:hover {
+  background-color: #dc143c;
+  box-shadow: 0 0 20px #6fc5ff50;
+  transform: scale(1.1);
+}
+
+.sendButton:active {
+  background-color: #3d94cf;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  box-shadow: none;
+  transform: scale(0.98);
+}

@@ -1,0 +1,98 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #000000;;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #5E6282 !important;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.mainContent {
+    display: flex;
+    gap: 90px; /* Espacio entre las columnas */
+}
+
+.leftColumn {
+    flex: 2; /* Ocupa más espacio que la columna derecha */
+}
+
+.rightColumn {
+    flex: 1; /* Ocupa menos espacio que la columna izquierda */
+}
+
+.article {
+    display: flex;
+    margin-bottom: 40px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.articleImage {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+}
+
+.articleContent {
+    padding: 20px;
+    flex: 1;
+}
+
+.articleTitle {
+    font-size: 1.8rem;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+.articleMeta {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.articleDescription {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.readMore {
+    color: #ff8c00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.readMore:hover {
+    text-decoration: underline;
+}
+
+.popularPostsTitle {
+    font-size: 1.5rem;
+    color: #34495e;
+    margin-bottom: 15px;
+}
+
+.popularPostsList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.popularPostsList li {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
