@@ -2,7 +2,7 @@ import { query } from "@/app/lib/db";
 
 export async function GET() {
     try {
-        const results = await query("SELECT * FROM packages");
+        const results = await query("SELECT id, nombre_lugar, descripcion, paquete, precio, imagen, categoria FROM packages");
         return new Response(JSON.stringify(results), {
             headers: { "Content-Type": "application/json" },
         });

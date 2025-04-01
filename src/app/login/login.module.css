@@ -1,0 +1,214 @@
+.container {
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.loginCard {
+    flex: 1;
+    max-width: 450px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #F5F5DC;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.logo {
+    width: 120px;
+    margin-bottom: 1rem;
+}
+
+.header h1 {
+    color: #14183E !important;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.header p {
+    color: #5E6282 !important;
+    font-size: 0.9rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.inputGroup {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.inputIcon {
+    position: absolute;
+    left: 15px;
+    color: #5E6282;
+}
+
+.inputField {
+    background-color: #ffffff;
+    color: #5E6282 !important;
+    width: 100%;
+    padding: 12px 20px 12px 45px;
+    border: none;
+    border-radius: 50px;
+    font-size: 0.9rem;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+.rememberMe {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #5E6282 !important;
+}
+
+.forgotPassword {
+    color: #dc143c;
+    text-decoration: none;
+}
+
+.forgotPassword:hover {
+    text-decoration: underline;
+}
+
+.loginButton {
+    background-color: #ff8c00;
+    color: #000000;
+    padding: 12px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    color: #5E6282 !important;
+    font-size: 0.8rem;
+    margin: 1rem 0;
+}
+
+.divider::before, .divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.divider::before {
+    margin-right: 1rem;
+}
+
+.divider::after {
+    margin-left: 1rem;
+}
+
+.socialLogin {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.GoogleButton {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    background: #dc143c;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.GoogleButton:hover {
+    background-color: #000000;
+}
+
+.FaceButton {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    background: #1e90ff;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.FaceButton:hover {
+    background-color: #000000;
+}
+
+.signupLink {
+    text-align: center;
+    color: #4a5568;
+    font-size: 0.9rem;
+}
+
+.signupLink a {
+    color: #dc143c;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signupLink a:hover {
+    text-decoration: underline;
+}
+
+.decorativeImage {
+    flex: 1;
+    background-color: #ebf8ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.decorativeImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .loginCard {
+        max-width: 100%;
+        padding: 1.5rem;
+    }
+    
+    .decorativeImage {
+        display: none;
+    }
+}
+
+.errorMessage {
+    color: #dc143c;
+}

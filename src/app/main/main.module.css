@@ -83,10 +83,6 @@
     cursor: pointer;
 }
 
-.searchButton:hover {
-    background-color: #0056b3;
-}
-
 .packages {
     padding: 2rem;
     text-align: center;
@@ -94,6 +90,7 @@
 
 .packages h4 {
     color: #14183E !important;
+    margin-top: 40px;
 }
 
 .cardContainer {

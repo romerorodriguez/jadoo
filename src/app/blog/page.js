@@ -32,7 +32,6 @@ export default async function Blog() {
                                     <p className={styles.articleMeta}>Escrito por: {blog.author} • {blog.date}</p>
                                     <p className={styles.articleDescription}>{blog.description}</p>
                                     <Link href="/new" className={styles.readMore}>Read More</Link>
-                                    {/* <a href="#" className={styles.readMore}>READ MORE →</a> */}
                                 </div>
                             </article>
                         ))}
