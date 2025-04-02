@@ -14,23 +14,23 @@ export default function Login() {
 
     async function handleLogin(e) {
         e.preventDefault();
-        setMensaje(""); // Limpiar mensaje anterior
-
+        setMensaje("");
+    
         const res = await fetch("/api/login", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ correo, contrasena }),
         });
-
         const data = await res.json();
-        
         if (res.status === 200) {
-            router.push("/main"); // Redirige a la pantalla principaz
+            setMensaje("Ha iniciado sesión, bienvenido");
+            setTimeout(() => {
+                router.push("/admin/package"); 
+            }, 2000); // Breve retraso para que el mensaje sea visible
         } else {
-            setMensaje(data.message); // Muestra el mensaje de error
+            setMensaje(data.message);
         }
-    }
-
+    }    
     return (
         <div className={styles.container}>
             <div className={styles.loginCard}>
@@ -92,6 +92,14 @@ export default function Login() {
                         ¿No tienes una cuenta? <Link href="/register">Regístrate</Link>
                     </p>
                 </form>
+            </div>
+            <div className={styles.decorativeImage}>
+                <Image 
+                    src="/img/av.jpg" 
+                    alt="Destino de viaje" 
+                    width={80}
+                    height={80}
+                />
             </div>
         </div>
     );

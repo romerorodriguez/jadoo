@@ -9,8 +9,8 @@ export default function Navbar2() {
         <Image src="/img/logo.svg" alt="Service" width={90} height={80} className={styles.cardImage} />
         <Link href="/" className={styles.navLink}>Home</Link>
         <Link href="/" className={styles.navLink}>Destinos</Link>
-        <Link href="/main" className={styles.navLink}>Paquetes</Link>
-        <Link href="/src/admin/adminblogs/page.js" className={styles.navLink}>Blogs</Link>
+        <Link href="/admin/package" className={styles.navLink}>Paquetes</Link>
+        <Link href="/admin/blog" className={styles.navLink}>Blogs</Link>
         <Link href="/" className={styles.navLink}>Contacto</Link>
         <Link href="/">
           <button className={styles.loginButton}>Cerrar sesión</button>

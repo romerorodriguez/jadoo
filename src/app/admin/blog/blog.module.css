@@ -1,0 +1,220 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.titleContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #000000;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.editTitleButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.editTitleButton:hover {
+    background-color: #f0f0f0;
+}
+
+.editIcon {
+    font-size: 1.2rem;
+    color: #5E6282;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #5E6282 !important;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.mainContent {
+    display: flex;
+    gap: 90px;
+}
+
+.leftColumn {
+    flex: 2;
+}
+
+.rightColumn {
+    flex: 1;
+}
+
+.article {
+    margin-top: 20px;
+    display: flex;
+    margin-bottom: 40px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.imageContainer {
+    position: relative;
+    width: 300px;
+}
+
+.articleImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.articleActions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 5px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.article:hover .articleActions {
+    opacity: 1;
+}
+
+.actionButton {
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.actionIcon {
+    font-size: 14px;
+    color: #333;
+}
+
+.articleContent {
+    padding: 20px;
+    flex: 1;
+}
+
+.articleHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.articleButtons {
+    display: flex;
+    gap: 5px;
+}
+
+.smallActionButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.smallActionButton:hover {
+    background-color: #f0f0f0;
+}
+
+.smallActionIcon {
+    font-size: 14px;
+    color: #5E6282;
+}
+
+.articleTitle {
+    font-size: 1.8rem;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+.articleMeta {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.articleDescription {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.readMore {
+    color: #ff8c00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.readMore:hover {
+    text-decoration: underline;
+}
+
+.popularHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.popularPostsTitle {
+    font-size: 1.5rem;
+    color: #34495e;
+    margin: 0;
+}
+
+.popularPostsList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.popularItem {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.itemActions {
+    display: flex;
+    gap: 5px;
+}
+
+.addButton {
+    padding: 0.5rem 1rem;
+    background-color: #57e741;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}

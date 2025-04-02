@@ -11,7 +11,7 @@ export default function Navbar() {
         <Link href="/" className={styles.navLink}>Destinos</Link>
         <Link href="/main" className={styles.navLink}>Paquetes</Link>
         <Link href="/blog" className={styles.navLink}>Blogs</Link>
-        <Link href="/" className={styles.navLink}>Contacto</Link>
+        <Link href="/contact" className={styles.navLink}>Contacto</Link>
         <Link href="/login">
           <button className={styles.loginButton}>Inicia sesión</button>
         </Link>

@@ -5,7 +5,6 @@ export default function Footer() {
   return (
     <div className={styles.container}>
       <div className={styles.footer}>
-        {/* <p>Reserva tu viaje en minutos y obtén control total por mucho más tiempo.</p> */}
         <div className={styles.sections}>
           <div className={styles.section}>
           <img src="/img/logo2.svg" alt="Logo" width="100" height="100" />
