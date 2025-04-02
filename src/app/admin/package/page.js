@@ -1,19 +1,29 @@
-import styles from "./package.module.css"
+"use client";
+import { useState, useEffect } from "react";
+import styles from "./package.module.css";
 import Footer from "@/components/footer";
 import Navbar2 from "@/components/navbar2";
 import Link from "next/link";
 import { FiEdit, FiTrash2 } from "react-icons/fi";
 
-async function getPackages() {
-    const res = await fetch("http://localhost:3000/api/packages");
-    if (!res.ok) {
-        throw new Error("Failed to fetch packages");
-    }
-    return res.json();
-}
+export default function Packages() {
+    const [packages, setPackages] = useState([]);
 
-export default async function Packages() {
-    const packages = await getPackages();
+    useEffect(() => {
+        async function fetchPackages() {
+            try {
+                const res = await fetch("/api/packages");
+                if (!res.ok) {
+                    throw new Error("Failed to fetch packages");
+                }
+                const data = await res.json();
+                setPackages(data);
+            } catch (error) {
+                console.error("Error fetching packages:", error);
+            }
+        }
+        fetchPackages();
+    }, []);
 
     // Agrupar los paquetes por categoría
     const groupedPackages = packages.reduce((acc, pkg) => {
@@ -26,7 +36,7 @@ export default async function Packages() {
 
     return (
         <div className={styles.container}>
-            <Navbar2/>
+            <Navbar2 />
             <div className={styles.packages}>
                 <Link href="/createpackage">
                     <button className={styles.addButton}>Crear paquete</button>
@@ -42,16 +52,16 @@ export default async function Packages() {
                                     <div className={styles.imageContainer}>
                                         <img src={pkg.imagen} alt={pkg.nombre_lugar} className={styles.cardImgTop} />
                                         <div className={styles.imageActions}>
-                                        <Link href="/editpackages">
-                                            <button className={styles.actionButton}>
-                                                <FiEdit className={styles.icon} />
-                                            </button>
-                                        </Link>
-                                        <Link href="/deletepackages">
-                                            <button className={styles.actionButton}>
-                                                <FiTrash2 className={styles.icon} />
-                                            </button>
-                                        </Link>
+                                            <Link href={`/editpackage?id=${pkg.id}`}>
+                                                <button className={styles.actionButton}>
+                                                    <FiEdit className={styles.icon} />
+                                                </button>
+                                            </Link>
+                                            <Link href="/deletepackage">
+                                                <button className={styles.actionButton}>
+                                                    <FiTrash2 className={styles.icon} />
+                                                </button>
+                                            </Link>
                                         </div>
                                     </div>
                                     <div className={styles.cardBody}>
