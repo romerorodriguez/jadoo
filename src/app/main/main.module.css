@@ -4,85 +4,6 @@
     padding: 0;
 }
 
-.section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50vh;
-    background-color: #F5F5DC;
-}
-
-.content {
-    text-align: center;
-    background-color: #ff8c00;
-    padding: 2rem;
-    border-radius: 8px;
-    color: #14183E !important;
-}
-
-.searchContainer {
-    display: flex;
-    gap: 1rem;
-    align-items: flex-end;
-}
-
-.searchGroup input {
-    background-color: #ffffff;
-}
-
-.searchGroup {
-    display: flex;
-    flex-direction: column;
-}
-
-.searchGroup label {
-    font-size: 0.875rem;
-    color: #14183E;
-    margin-bottom: 0.5rem;
-}
-
-.searchGroup input {
-    padding: 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-.dateInputs {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.roomInput {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.roomInput button {
-    padding: 0.25rem 0.5rem;
-    border: none;
-    background-color: #ffffff;
-    cursor: pointer;
-    color: #14183E;
-}
-
-.roomInput input {
-    width: 2rem;
-    text-align: center;
-    border: none;
-    border-radius: 5px;
-    color: #14183E;
-}
-
-.searchButton {
-    padding: 0.5rem 1rem;
-    background-color: #dc143c;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
 .packages {
     padding: 2rem;
     text-align: center;
@@ -150,4 +71,24 @@
 
 .internationals h4 {
     color: #14183E !important;
+}
+
+.searchContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.searchInput {
+    flex: 1;
+    padding: 12px 20px;
+    border: 5E6282;
+    border-radius: 50px;
+    font-size: 1rem;
+    color: #000000;
+    background-color: #fff;
 }

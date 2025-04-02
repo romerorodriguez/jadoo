@@ -52,12 +52,12 @@ export default function Packages() {
                                     <div className={styles.imageContainer}>
                                         <img src={pkg.imagen} alt={pkg.nombre_lugar} className={styles.cardImgTop} />
                                         <div className={styles.imageActions}>
-                                            <Link href={`/editpackage?id=${pkg.id}`}>
+                                            <Link href="/editpackages">
                                                 <button className={styles.actionButton}>
                                                     <FiEdit className={styles.icon} />
                                                 </button>
                                             </Link>
-                                            <Link href="/deletepackage">
+                                            <Link href={`/deletepackage?id=${pkg.id}`}>
                                                 <button className={styles.actionButton}>
                                                     <FiTrash2 className={styles.icon} />
                                                 </button>

@@ -25,54 +25,13 @@ export default async function Packages() {
     return (
         <div className={styles.container}>
             <Navbar />
-            <div className={styles.section}>
-                <div className={styles.content}>
-                    <h2>Paquete de viajes</h2>
-                    <div className={styles.searchContainer}>
-                        <div className={styles.searchGroup}>
-                            <label htmlFor="origin">Destino</label>
-                            <input 
-                                type="text" 
-                                id="origin" 
-                                placeholder="Buscar destinos"
-                                className={styles.searchInput}
-                            />
-                        </div>
-                        <div className={styles.searchGroup}>
-                            <label htmlFor="check-in">Fechas</label>
-                            <div className={styles.dateInputs}>
-                                <input 
-                                    type="text" 
-                                    id="check-in" 
-                                    placeholder="Agrega tu fecha de llegada"
-                                    className={styles.searchInput}
-                                />
-                                <input 
-                                    type="text" 
-                                    id="check-out" 
-                                    placeholder="Agrega tu fecha de salida"
-                                    className={styles.searchInput}
-                                />
-                            </div>
-                        </div>
-                        <div className={styles.searchGroup}>
-                            <label htmlFor="rooms">Habitaciones</label>
-                            <div className={styles.roomInput}>
-                                <button className={styles.roomButton}>-</button>
-                                <input 
-                                    type="text" 
-                                    id="rooms" 
-                                    value="1" 
-                                    readOnly
-                                    className={styles.roomCount}
-                                />
-                                <button className={styles.roomButton}>+</button>
-                            </div>
-                        </div>
-                        <button className={styles.searchButton}>Buscar</button>
-                    </div>
+            <div className={styles.searchContainer}>
+                    <input 
+                        type="text" 
+                        placeholder="Buscar..." 
+                        className={styles.searchInput}
+                    />
                 </div>
-            </div>
             <div className={styles.packages}>
                 {Object.entries(groupedPackages).map(([categoria, paquetes]) => (
                     <div key={categoria}>

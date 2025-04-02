@@ -1,7 +1,23 @@
 "use client";
 import { useState } from "react";
-import styles from "./create.module.css";
+import { useEditor } from "@tiptap/react";
+import StarterKit from "@tiptap/starter-kit";
+import Toolbar from "../editblogs/Toolbar";
+import Blockquote from "@tiptap/extension-blockquote";
+import CodeBlock from "@tiptap/extension-code-block";
+import Heading from "@tiptap/extension-heading";
+import Highlight from "@tiptap/extension-highlight";
+import Bold from "@tiptap/extension-bold";
+import Italic from "@tiptap/extension-italic";
+import Underline from "@tiptap/extension-underline";
+import BulletList from "@tiptap/extension-bullet-list";
+import OrderedList from "@tiptap/extension-ordered-list";
+import ListItem from "@tiptap/extension-list-item";
+import TextAlign from "@tiptap/extension-text-align";
+import { EditorContent } from "@tiptap/react";
 import { useRouter } from "next/navigation";
+import styles from "./create.module.css";
+import Image from "next/image";
 
 export default function Create() {
     const [title, setTitle] = useState("");
@@ -9,6 +25,23 @@ export default function Create() {
     const [image, setImage] = useState(null);
     const [description, setDescription] = useState("");
     const router = useRouter();
+
+    const editor = useEditor({
+        extensions: [
+            StarterKit,
+            Underline,
+            Blockquote,
+            TextAlign.configure({ types: ["heading", "paragraph"] }),
+            Blockquote,
+            Heading.configure({ levels: [1, 2, 3] }),
+            Highlight,
+            CodeBlock
+        ],
+        content: description,
+        onUpdate: ({ editor }) => {
+            setDescription(editor.getHTML());
+        },
+    });
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -76,12 +109,8 @@ export default function Create() {
                 </div>
                 <div className={styles.formGroup}>
                     <label className={styles.label}>Descripción:</label>
-                    <textarea 
-                        className={styles.textarea}
-                        value={description}
-                        onChange={(e) => setDescription(e.target.value)}
-                        required
-                    ></textarea>
+                    <Toolbar editor={editor} />
+                    <EditorContent editor={editor} className={styles.textarea} />
                 </div>
                 <button type="submit" className={styles.submitButton}>
                     Guardar Noticia

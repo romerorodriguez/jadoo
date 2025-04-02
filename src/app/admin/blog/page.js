@@ -19,7 +19,6 @@ export default function Blog() {
             console.error(error);
         }
     };
-
     useEffect(() => {
         fetchBlogs();
     }, []);

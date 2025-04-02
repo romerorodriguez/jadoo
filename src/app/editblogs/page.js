@@ -1,7 +1,23 @@
 "use client";
 import { useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import { EditorContent, useEditor } from "@tiptap/react";
+import StarterKit from "@tiptap/starter-kit";
+import Toolbar from "./Toolbar";
+import Blockquote from "@tiptap/extension-blockquote";
+import CodeBlock from "@tiptap/extension-code-block";
+import Heading from "@tiptap/extension-heading";
+import Highlight from "@tiptap/extension-highlight";
+import Bold from "@tiptap/extension-bold";
+import Italic from "@tiptap/extension-italic";
+import Underline from "@tiptap/extension-underline";
+import BulletList from "@tiptap/extension-bullet-list";
+import OrderedList from "@tiptap/extension-ordered-list";
+import ListItem from "@tiptap/extension-list-item";
 import styles from "./edit.module.css";
+import TextAlign from "@tiptap/extension-text-align";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function EditBlog() {
     const router = useRouter();
@@ -14,6 +30,25 @@ export default function EditBlog() {
         image: "", // Base64 de la imagen
         description: ""
     });
+
+const editor = useEditor({
+    extensions: [
+        StarterKit,
+        Underline,
+        Blockquote,
+        Link,
+        Image,
+        TextAlign.configure({ types: ["heading", "paragraph"] }),
+        Blockquote,
+        Heading.configure({ levels: [1, 2, 3] }),
+        Highlight,
+        CodeBlock
+    ],
+    content: formData.description,
+    onUpdate: ({ editor }) => {
+        setFormData({ ...formData, description: editor.getHTML() });
+    },
+});
 
     useEffect(() => {
         const fetchBlog = async () => {
@@ -28,6 +63,7 @@ export default function EditBlog() {
                     image: data.image, // Mantiene la imagen en base64
                     description: data.description
                 });
+                editor?.commands.setContent(data.description);
             } catch (error) {
                 console.error(error);
                 alert("No se pudo cargar el blog");
@@ -35,7 +71,7 @@ export default function EditBlog() {
         };
 
         fetchBlog();
-    }, [blogId]);
+    }, [blogId, editor]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -105,13 +141,8 @@ export default function EditBlog() {
                 </div>
                 <div className={styles.formGroup}>
                     <label className={styles.label}>Descripción:</label>
-                    <textarea 
-                        name="description" 
-                        value={formData.description} 
-                        onChange={handleChange} 
-                        className={styles.textarea}
-                        required
-                    ></textarea>
+                    <Toolbar editor={editor} />
+                    <EditorContent editor={editor} className={styles.textarea} />
                 </div>
                 <div className={styles.formGroup}>
                     <label className={styles.label}>Imagen:</label>
