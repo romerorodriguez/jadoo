@@ -22,6 +22,13 @@ export default async function Blog() {
                 <p className={styles.subtitle}>
                 Descubre consejos, destinos y experiencias que te inspirarán a explorar el mundo.
                 </p>
+                <div className={styles.searchContainer}>
+                    <input 
+                        type="text" 
+                        placeholder="Buscar..." 
+                        className={styles.searchInput}
+                    />
+                </div>
                 <div className={styles.mainContent}>
                     <div className={styles.leftColumn}>
                         {blogs.map((blog) => (

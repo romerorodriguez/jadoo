@@ -97,3 +97,22 @@
     color: #666;
     margin-bottom: 10px;
 }
+
+.searchContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.searchInput {
+    flex: 1;
+    padding: 12px 20px;
+    border: 5E6282;
+    border-radius: 50px;
+    font-size: 1rem;
+    color: #000000;
+    background-color: #fff;
+}

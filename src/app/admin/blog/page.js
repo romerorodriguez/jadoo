@@ -30,9 +30,6 @@ export default function Blog() {
                 <Navbar2/>
                 <div className={styles.titleContainer}>
                     <h1 className={styles.title}>Blog de Viajes</h1>
-                    <button className={styles.editTitleButton}>
-                        <FiEdit className={styles.editIcon} />
-                    </button>
                 </div>
                 <p className={styles.subtitle}>
                     Descubre consejos, destinos y experiencias que te inspirarán a explorar el mundo.
@@ -53,12 +50,16 @@ export default function Blog() {
                                 <div className={styles.articleHeader}>
                                     <h2 className={styles.articleTitle}>{blog.title}</h2>
                                     <div className={styles.articleButtons}>
+                                        <Link href={`/editblogs?id=${blog.id}`}>
                                             <button className={styles.smallActionButton}>
                                                 <FiEdit className={styles.smallActionIcon} />
                                             </button>
+                                        </Link>
+                                        <Link href={`/deleteblogs?id=${blog.id}`}>
                                             <button className={styles.smallActionButton}>
                                                 <FiTrash2 className={styles.smallActionIcon} />
                                             </button>
+                                        </Link>
                                     </div>
                                 </div>
                                 <p className={styles.articleMeta}>Escrito por: {blog.author} • {blog.date}</p>

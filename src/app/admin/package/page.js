@@ -35,14 +35,6 @@ export default async function Packages() {
                     <div key={categoria} className={styles.categoryContainer}>
                         <div className={styles.categoryHeader}>
                             <h4>{categoria}</h4>
-                            <div className={styles.categoryActions}>
-                                <button className={styles.actionButton}>
-                                    <FiEdit className={styles.icon} />
-                                </button>
-                                <button className={styles.actionButton}>
-                                    <FiTrash2 className={styles.icon} />
-                                </button>
-                            </div>
                         </div>
                         <div className={styles.cardContainer}>
                             {paquetes.map((pkg) => (
@@ -50,12 +42,16 @@ export default async function Packages() {
                                     <div className={styles.imageContainer}>
                                         <img src={pkg.imagen} alt={pkg.nombre_lugar} className={styles.cardImgTop} />
                                         <div className={styles.imageActions}>
+                                        <Link href="/editpackages">
                                             <button className={styles.actionButton}>
                                                 <FiEdit className={styles.icon} />
                                             </button>
+                                        </Link>
+                                        <Link href="/deletepackages">
                                             <button className={styles.actionButton}>
                                                 <FiTrash2 className={styles.icon} />
                                             </button>
+                                        </Link>
                                         </div>
                                     </div>
                                     <div className={styles.cardBody}>
